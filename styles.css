@@ -1,0 +1,198 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My CSS */
+.buttons, .container {
+  width: 30rem;
+}
+.buttons, .container, body {
+  display: flex;
+}
+body {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #141414;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.logo-img {
+  width: 21rem;
+}
+.container {
+  height: 24rem;
+  width: 30rem;
+  flex-wrap: wrap;
+}
+.container div {
+  height: calc(24rem / 4);
+  width: calc(30rem / 5);
+  border: 0.2rem solid #141414;
+  box-sizing: border-box;
+  background-color: #d3d3d3;
+  border-radius: 0.5rem;
+}
+.buttons .start,
+.buttons select {
+  width: 5rem;
+  height: 2rem;
+  border-style: none;
+  border-radius: 0.25rem;
+}
+.container div:active {
+  background: rgba(0, 0, 0, 0.5);
+}
+.blue-img {
+  background: url('pics/bg-16.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.buttons {
+  height: 5rem;
+  justify-content: space-around;
+  align-items: center;
+  width: 21rem;
+}
+button:hover {
+  cursor: pointer;
+}
+.buttons .start {
+  background-color: #f3f3f3;
+}
+.buttons label {
+  color: #f3f3f3;
+}
+.buttons select {
+  background-color: #0275d8;
+  color: #f3f3f3;
+}
+
+/* Tablet */
+@media only screen and (max-width: 70em) {
+  .logo-img {
+    width: 26rem;
+  }
+  .container {
+    height: 24rem;
+    width: 30rem;
+  }
+  .container div {
+    border-radius: 0.85rem;
+    height: calc(24rem/4);
+    width: calc(30rem/5);
+  }
+  .buttons {
+    width: 25rem;
+  }
+  .buttons .start, .buttons select, .buttons .confirm {
+    border-radius: 0.35rem;
+    width: 6rem;
+    height: 2rem;
+  }
+  .buttons label {
+    color: #f3f3f3;
+  }
+  .buttons select {
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 38em) {
+  .logo-img {
+    width: 21rem;
+  }
+  .container {
+    height: 16rem;
+    width: 20rem;
+  }
+  .container div {
+    height: calc(16rem/4);
+    width: calc(20rem/5);
+    border-radius: 0.5rem;
+  }
+  .buttons {
+    width: 21rem;
+  }
+  .buttons .start, .buttons select, .buttons .confirm {
+    width: 5rem;
+    border-radius: 0.25rem;
+  }
+  .buttons .confirm {
+    border-style: none;
+  }
+  .buttons select option {
+    position: relative;
+    top: 80rem;
+
+    background-color: red;
+  }
+}
+
+/* Small Mobile */
+@media only screen and (max-width: 20em) {
+  .logo-img {
+    width: 8rem;
+    margin-top: 0rem;
+  }
+  .container {
+    height: 14.4rem;
+    width: 18rem;
+  }
+  .container div {
+    height: calc(14.4rem/4);
+    width: calc(18rem/5);
+  }
+  .buttons {
+    width: 16rem;
+    margin-top: 0rem;
+    height: 3.5rem;
+  }
+  .buttons .start, .buttons select, .buttons .confirm {
+    font-size: 0.6rem;
+    width: 3.2rem;
+    height: 1.75rem;
+  }
+}
